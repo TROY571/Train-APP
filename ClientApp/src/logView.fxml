@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@logView.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LogViewController">
+    <children>
+        <Pane fx:id="rightPane" layoutX="189.0" layoutY="-10.0" prefHeight="580.0" prefWidth="612.0">
+         <children>
+            <TextField fx:id="usernameThing" layoutX="109.0" layoutY="202.0" prefHeight="25.0" prefWidth="445.0" />
+            <TextField fx:id="passwordThing" layoutX="109.0" layoutY="301.0" prefHeight="25.0" prefWidth="445.0" />
+            <Label layoutX="59.0" layoutY="164.0" text="Username:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="260.0" text="Password:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="356.0" layoutY="470.0" mnemonicParsing="false" onAction="#log" prefHeight="25.0" prefWidth="92.0" text="Login" />
+            <Button fx:id="registerBtn" layoutX="462.0" layoutY="470.0" mnemonicParsing="false" onAction="#register" prefHeight="25.0" prefWidth="92.0" text="Register" />
+            <Label layoutX="65.0" layoutY="346.0" text="Age:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ageThing" layoutX="109.0" layoutY="389.0" prefHeight="25.0" prefWidth="70.0" />
+            <Button id="logoutbtn" layoutX="65.0" layoutY="470.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="92.0" text="Logout" />
+            <Label fx:id="errorLabel" layoutX="192.0" layoutY="384.0" prefHeight="36.0" prefWidth="328.0" textFill="#e40606">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="65.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/user.png" />
+               </image></ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="65.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/padlock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="65.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/hourglass.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+        <Button fx:id="trainBtn" layoutY="174.0" mnemonicParsing="false" onAction="#openMainView" prefHeight="50.0" prefWidth="189.0" text="Trains" />
+        <Button fx:id="ticketBtn" layoutY="256.0" mnemonicParsing="false" onAction="#openTicketView" prefHeight="50.0" prefWidth="189.0" text="Tickets" />
+        <Text fx:id="timeText" fill="WHITE" layoutX="25.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00" />
+        <Button fx:id="loginBtn" layoutX="20.0" layoutY="457.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Log-in" />
+        <Button fx:id="infoBtn" layoutY="344.0" mnemonicParsing="false" onAction="#openInfoView" prefHeight="50.0" prefWidth="189.0" text="Personal Information" />
+    </children>
+</AnchorPane>

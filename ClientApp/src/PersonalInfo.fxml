@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@PersonalInfoStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PersonalInfoController">
+    <children>
+        <Pane fx:id="rightPane" layoutX="189.0" prefHeight="561.0" prefWidth="612.0">
+            <children>
+                <Pane fx:id="trainPane" layoutX="31.0" layoutY="31.0" prefHeight="482.0" prefWidth="317.0">
+               <children>
+                  <Label fx:id="userLabel" layoutX="14.0" layoutY="26.0" text="Username">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="38.0" layoutY="99.0" text="Age:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="38.0" layoutY="145.0" text="Gender:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="152.0" layoutY="420.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Check Booked Trains" />
+                  <Label fx:id="ageLabel" layoutX="99.0" layoutY="99.0" prefHeight="27.0" prefWidth="43.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+                
+            </children></Pane>
+        <Button fx:id="trainBtn" layoutY="174.0" mnemonicParsing="false" onAction="#openMainView" prefHeight="50.0" prefWidth="189.0" text="Trains" />
+        <Button fx:id="ticketsBtn" layoutY="256.0" mnemonicParsing="false" onAction="#openTicketView" prefHeight="50.0" prefWidth="189.0" text="Tickets" />
+        <Text fx:id="timeText" fill="WHITE" layoutX="25.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00" />
+        <Button fx:id="loginBtn" layoutX="20.0" layoutY="457.0" mnemonicParsing="false" onAction="#openLogView" prefHeight="35.0" prefWidth="150.0" text="Log-in" />
+        <Button fx:id="pInfoBtn" layoutY="344.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="189.0" text="Personal Information" />
+    </children>
+</AnchorPane>

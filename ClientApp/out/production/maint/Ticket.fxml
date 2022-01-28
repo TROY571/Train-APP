@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@ticketStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicketViewController">
+    <children>
+        <Pane fx:id="rightPane" layoutX="189.0" prefHeight="561.0" prefWidth="612.0">
+            <children>
+                <Label layoutX="35.0" layoutY="26.0" style="-fx-font-family: Serifs;" text="Tickets">
+                    <font>
+                        <Font size="24.0" />
+                    </font></Label>
+                <Label layoutX="35.0" layoutY="51.0" text="Booked">
+                    <font>
+                        <Font name="System Bold" size="34.0" />
+                    </font>
+                    <effect>
+                        <Bloom threshold="0.6" />
+                    </effect></Label>
+                <Pane fx:id="trainPane" layoutX="14.0" layoutY="124.0" prefHeight="412.0" prefWidth="344.0">
+                    <children>
+                        <TableView fx:id="ticketTable" layoutY="13.0" onMouseClicked="#updateLabel" prefHeight="388.0" prefWidth="344.0">
+                            <columns>
+                                <TableColumn prefWidth="78.0" text="From">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="from" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn minWidth="0.0" prefWidth="81.0" text="To">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="to" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="90.0" text="Departure">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="exitOfStation" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="94.0" text="Arrival">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="arrivalTime" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                    </children>
+                </Pane>
+            <Button layoutX="254.0" layoutY="73.0" mnemonicParsing="false" onAction="#setTicketRouteList" text="Show Tickets" />
+            <Pane fx:id="rightPaneR" layoutX="369.0" layoutY="124.0" prefHeight="412.0" prefWidth="213.0">
+               <children>
+                  <Button fx:id="deleteBtn" layoutX="17.0" layoutY="365.0" mnemonicParsing="false" onAction="#deleteTicket" prefHeight="42.0" prefWidth="180.0" text="Cancel Ticket">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Label layoutX="18.0" layoutY="44.0" text="User:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="110.0" text="Seat:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="179.0" text="Type:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="253.0" text="Date:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userLbl" layoutX="80.0" layoutY="44.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seatLbl" layoutX="80.0" layoutY="110.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="typeLbl" layoutX="80.0" layoutY="179.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateLbl" layoutX="80.0" layoutY="253.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Label fx:id="deleteLbl" layoutX="168.0" layoutY="30.0" prefHeight="27.0" prefWidth="434.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            </children></Pane>
+        <Button fx:id="trainBtn" layoutY="174.0" mnemonicParsing="false" onAction="#openMainView" prefHeight="50.0" prefWidth="189.0" text="Trains" />
+        <Button fx:id="ticketsBtn" layoutY="256.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="189.0" text="Tickets" />
+        <Text fx:id="timeText" fill="WHITE" layoutX="25.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00" />
+        <Button fx:id="loginBtn" layoutX="20.0" layoutY="457.0" mnemonicParsing="false" onAction="#openLogView" prefHeight="35.0" prefWidth="150.0" text="Log-in" />
+      <Button fx:id="infoBtn" layoutY="344.0" mnemonicParsing="false" onAction="#openInfoView" prefHeight="50.0" prefWidth="189.0" text="Personal Information" />
+    </children>
+</AnchorPane>

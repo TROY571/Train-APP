@@ -1,0 +1,97 @@
+
+
+#mainPane
+{
+-fx-background-color: #28ad47;
+}
+
+#rightPane
+{
+-fx-background-color: white;
+-fx-background-radius: 20, 0, 0, 20;
+-fx-border-radius: 20, 0, 0, 20;
+}
+
+.button
+{
+-fx-background-color: #28ad47;
+-fx-text-fill: white;
+-fx-font-family: customF;
+}
+
+.button:hover
+{
+-fx-background-color: #a100ba, #198a33;
+-fx-background-insets: 0, 0 0 0 4;
+-fx-font-size: 15px;
+
+}
+
+#timeText
+{
+-fx-font-size: 15px;
+}
+
+#trainPane
+{
+-fx-background-radius: 20, 20, 20, 20;
+-fx-effect: dropshadow(gaussian,rgba(0,0,0,0.1), 15, 0.1, 2, 2);
+-fx-background-color: white;
+}
+
+.table-view
+{
+-fx-background-color: transparent;
+-fx-border-radius: 7, 7, 7, 7;
+}
+
+.table-view .column-header
+{
+-fx-background-color: #28ad47;
+-fx-text-background-color: white;
+
+}
+
+.table-view .column-header-background
+{
+-fx-border-radius: 7px, 7px, 7px, 7px;
+}
+
+.choice-box
+{
+-fx-background-color: white;
+-fx-mark-color: #28ad47;
+-fx-effect: dropshadow(gaussian,rgba(0,0,0,0.1), 15, 0.1, 2, 2);
+}
+
+.date-picker .arrow-button
+{
+-fx-background-color: #28ad47;
+}
+
+#resultPane
+{
+-fx-background-radius: 20, 20, 20, 20;
+-fx-effect: dropshadow(gaussian,rgba(0,0,0,0.1), 15, 0.1, 2, 2);
+-fx-background-color: white;
+}
+
+#bookingBtn
+{
+-fx-border-radius: 7px, 7px, 7px, 7px;
+}
+
+#logoutbtn
+{
+-fx-background-color: #d6180b;
+}
+
+
+#loginBtn
+{
+-fx-background-color: #0acc00;
+-fx-border-radius: 7px, 7px, 7px, 7px;
+}
+
+
+
